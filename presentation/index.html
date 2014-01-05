@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+        <head>
+                <meta charset="utf-8">
+
+                <title>FBLA Web Design Presentation</title>
+
+                <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+                <meta name="author" content="Nick Poelma">
+                <meta name="author" content="Colin McIllece">
+
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+                <link rel="stylesheet" href="css/reveal.min.css">
+                <link rel="stylesheet" href="css/theme/default.css" id="theme">
+                <link rel='stylesheet' href='/css/main.css'>
+
+                <!-- For syntax highlighting -->
+                <link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+                <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+                <script>
+                        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+                </script>
+
+                <!--[if lt IE 9]>
+                <script src="lib/js/html5shiv.js"></script>
+                <![endif]-->
+                <script src='/cdn/angular.min.js'></script>
+                <script src='/ctrl.js'></script>
+                <style>
+                .tasks {
+                        font-size: .5em !important;
+                        margin: 10px !important;
+                        display:block !important;
+                }
+
+                .tasks li:hover {
+                        cursor: pointer;
+                }
+
+                .tasks li img {
+                        transition: display 0.5s, background 0.25s,color 0.25s,border 0.25s, position 0.25s;
+                        display:none;
+                }
+
+                .tasks li:hover img,
+                .tasks li:focus img {
+                        transition: display 0.5s, background 0.25s,color 0.25s,border 0.25s, position 0.25s;
+                        display:block;
+                        position:absolute;
+                        top:0;
+                        bottom:0;left:0;right:0;
+                        margin:0 auto;
+                        box-shadow:1px 1px 5px 3px rgba(0,0,0,1);
+                }
+
+                li {
+                        list-style-type: circle;
+                        margin-bottom:15px;
+                }
+                </style>
+        </head>
+
+        <body>
+
+                <div class="reveal">
+
+                        <!-- Any section element inside of this container is displayed as a slide -->
+                        <div class="slides">
+                                <section>
+                                        <h1>CherryGrove B&amp;B</h1>
+                                        <h3>A bread and breakfast website</h3>
+                                        <p>
+                                                <small>Created by <a href="http://cmacca.github.io">Colin McIllece</a>&nbsp; and&nbsp;<a href="http://nwplayer123.bplaced.net/">Nick Poelma</a></small>
+                                        </p>
+                                </section>
+
+                                <section>
+                                        <h2>What It Is</h2>
+                                        <hr>
+                                         <ul>
+                                          <li>A website for the CherryGrove bed and breakfast to find customers online</li>
+                                          <li>A registering platform for the CherryGrove B&amp;B to allow guests to register online</li>
+                                          <li>An informational brochure for customers interested in the CherryGrove B&amp;B</li>
+                                          </ul>
+                                
+                                </section>
+
+                                <!-- Example of nested vertical slides -->
+                                <section>
+                                        <section>
+                                                <h2>Project Division</h2>
+                                                <hr></hr>
+                                                <ul class='tasks'><h3>Nick's Work</h3>
+                                                <li>Front-End Development - Jade, LESS</li>
+                                                <li>Graphic Design - Photoshop, Illustrator</li>
+                                                <li>Content Management - Jade, Markdown, Copywriting Methods</li>
+                                                <li>Quality Assurance - Coordination of Test-Driven-Development methodology</li>
+                                                </ul>
+                                                <br>
+                                                <ul class='tasks'><h3>Colin's Work</h3>
+                                                <li>Front-End Development - Jade, LESS</li>
+                                                <li>Backend Engineering - jQuery, Databases</li>
+                                                <li>Infrastructure Management - Github, Deployment, and HarpJS Asset Pipelining</li>
+                                                <li>Information Architecture - Site Planning and Mockups</li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Front-End Development</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+                                                <li>Jade - A Whitespace-Sensitive Dynamic Templating Language for HTML <img src='/images/jade.png'></li>
+                                                <li>LESS - A CSS Preprocessor with variables, mixins, nesting <img src='/images/less.png'></li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Infrastructure Management</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+                                                <li>Git Version Control System and GitHub Integration -  A way to ensure all development code is consistent and streamlines collaboration <img src='/images/github.png'></li>
+                                                <li>Github Pages - A hosting solution catered specifically to the Github collaboration tool, which allows for easy deployment.</li>
+                                                <li>HarpJS - A way to ensure that all our Jade and LESS would be preprocessed without hassle, and allows for dynamic content powered by JSON files <img src='/images/harp.png'></li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Infrastructure Management - Demo</h2>
+                                                <hr>
+                                                <iframe class='tdemo' width="800px" height='600px' src='http://showterm.io/53c61dd3e4ead14c304c3
+#fast'>
+                                                        Showterm is not supported in this location
+                                                </iframe>
+                                        </section>
+                                        <section>
+                                                <h2>Backend Engineering</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+                                                <li>Firebase BaaS - A cloud-based document-oriented backend with a AngularJS API, used to keep track of book and ticket orders <img src='/images/firebase.png'></li>
+                                                <li>JavaScript and AngularJS API ensured that data in the cloud perfectly synced with AngularJS $scope(like variables) in realtime.<img src='/images/angular.png'></li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Graphic Design</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+                                                <li>The use of sophisticated graphic editing software such as Adobe Photoshop and Fireworks to improve and enhance every graphic on the website. Tools such as cropping, filters, and even fabricating images from scratch.</li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Content Management/Information Architecture</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+                                                <li>Content Management - Development of advanced grammar, deployed in such a way that the text will invite users to remain on a website longer and augment the buyer conversion rate(number of users who visit a site and buy a product or complete a task).</li>
+                                                <li>Information Architecture - Involves the categorization of information into a coherent structure, preferably one that the intended audience can understand quickly, if not inherently, and then easily retrieve the information for which they are searching. Aesthetics and usability are key to a successful website.
+                                                </li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                                <h2>Quality Assurance and Test-Driven-Development</h2>
+                                                <hr>
+                                                <ul class='tasks'>
+
+                                                <li>Quality Assurance - The process of executing the functions on the website with the intent of finding software defects or bugs in order to improve the user experience and allow easier implementation of code.
+                                                </li>
+                                                <li>Test-Diven-Development - A process involving the setup of code tests, execution of the tests, validation of the code, and cleanup of the code to ensure that only the bare minimum of code needed is included in the files.</li>
+                                                </ul>
+                                        </section>
+                                        <section>
+                                        <h2>Thank you</h2>
+                                        </section>
+                                </section>
+                        </div>
+
+                </div>
+
+                <script src="lib/js/head.min.js"></script>
+                <script src="js/reveal.min.js"></script>
+
+                <script>
+
+                        // Full list of configuration options available here:
+                        // https://github.com/hakimel/reveal.js#configuration
+                        Reveal.initialize({
+                                controls: true,
+                                progress: true,
+                                history: true,
+                                center: true,
+
+                                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                                // Optional libraries used to extend on reveal.js
+                                dependencies: [
+                                        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                                ]
+                        });
+
+                </script>
+
+        </body>
+</html>
