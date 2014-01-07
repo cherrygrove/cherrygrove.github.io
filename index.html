@@ -7,17 +7,18 @@
 		<meta name="keywords" content="FBLA, FBLA-PBL, FBLA 2014 Districts, FBLA 2014 Districts Competition, ThunderRidge, ThunderRidge High School, NWPlayer123, DefiniteStudios, Definite Studios">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script language="javascript" type="text/javascript" src="jquery.j"></script>
+		</head>
 	<body>
 		<div id="header">
-		<img src="headerimg">
 			<div id="HeaderLinks">
-				<div>
-					<a class="MenuLinks" href="">Home</a>
-					<a class="MenuLinks" href="">Packages</a>
-					<a class="MenuLinks" href="">Rooms</a> 
-					<a class="MenuLinks" href="">Dining</a> 
-					<a class="MenuLinks" href="">Attractions</a>	     
-					<a class="MenuLinks" href="">Directions</a>	
+				<div style="margin-top: -3.7em;">
+					<a class="MenuLinks" href="#">Home</a>
+					<a class="MenuLinks" href="#packages">Packages</a> 
+					<a class="MenuLinks" href="#dining">Dining</a>
+					<a class="MenuLinks" href="#rooms">Rooms</a> 
+					<a class="MenuLinks" href="#attractions">Attractions</a>	     
+					<a class="MenuLinks" href="#location">Location</a>
+					<a class="MenuLinks" href="#reg">Register</a>	
 				</div>
 			</div>
 		</div>
@@ -44,8 +45,66 @@
 					</div>
 				</div>
 			</div>
+			<div id="test">
+			<div id="pack">
+				<h2 id="packages">Packages</h2>
+			</div>
+			<div id="din">
+				<h2 id="dining">Dining</h2>
+			</div>
+			<div id="roo">
+				<h2 id="rooms">Rooms</h2>
+			</div>
+			<div id="attract">
+				<h2 id="attractions">Attractions</h2>
+			</div>
+			<div id="locate">
+				<h2 id="location">Location</h2>
+			</div>
+			<div id="reg">
+				<ng-view class="ng-scope">
+					<h2 id="register">Register</h2>
+					<div id="checkIn" class="page ng-scope">
+
+					<!--Begin Google Spreadsheet input -->
+					<center>
+						<form method="POST" action="https://docs.google.com/forms/d/1n2KL8CnJ7Mn6ciKr3Twlv_g5YY5KMQYsZa1JrFLwFpo/formResponse" target="hidden_iframe" onsubmit="checkSub=true;" class="ng-pristine ng-valid">
+							<input type="text" placeholder="Name" name="entry.1648404119">
+							<br>
+							<input type="text" placeholder="Address" name="entry.884264956">
+							<br>
+							<!-- multiple choice -->
+							<select type="ermah" name="entry.1804675108" id="entry_1804675108" aria-label="Room">
+								<option placeholder="Select a Room" value="">-Select a Room-</option>
+								<option value="The Lightfoot">The Lightfoot</option> 
+								<option value="The Thompson">The Thompson</option> 
+								<option value="The Pulliam">The Pulliam</option> 
+								<option value="The Washington">The Washington</option> 
+								<option value="The Chelf Room">The Chelf Room</option>
+							</select>
+						<!-- End multiple choice -->
+							<br>
+							<input type="text" placeholder="Package Desired (If any)" name="entry.549162563">
+							<div class="ss-form-entry">
+							<br>
+							<input type="text" placeholder="Intended Date of Arrival (mm/dd/yyyy)" name="entry.1570829290">
+							<br>
+							<input type="number" placeholder="Stay Duration (Number of Nights)" name="entry.2118283400" aria-label="Stay duration (Nights)  Must be a number greater than or equal to 1" step="any" min="1.0" aria-valuemin="1.0" title="Must be a number greater than or equal to 1"></input>
+							</div>
+							<br>
+							<input type="submit" value="Submit">
+							</input>
+						</form>
+						</center>
+						<!-- End Google Spreadsheet input -->
+
+					</div>
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(checkSub){alert('You Have Registered! Payment is processed once you check in.'); checkSub=false; window.location.hash = '#/transactions'}" class="ng-scope">
+					</iframe>
+				</ng-view>
+			</div>
 			<div id="footer">
-			Merp
+				Merp
 			</div>
 		</div>
 	</body>
